@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+  <main class="container">
+      <div class="estimation">
+        <h1 class="estimation__title">Estimate your investment</h1>
+        <div class="estimation__right">
+            
+          <ul class="estimation__lang">
+              <li class="estimation__lang-link usd" onclick="setCurUSD()">USD</li>
+              <li class="estimation__lang-link eur" onclick="setCurEUR()">EUR</li>
+              <li class="estimation__lang-link gbt" onclick="setCurGBT()">GBP</li>
+            </ul>
+
+            <div class="estimation__range-block">
+              <input type="range" id="r1" oninput="getPrice()" value="1" min="1" max="39" class="estimation__range">
+              <div class="estimation__range-text_number"></div>
+              <div class="estimation__range-text_price"></div>
+            </div>
+        </div>
+
+        <div class="select-block">
+          <p class="select-block__text">How many users?</p>
+
+          <div class="select select_usd">
+            <input class="select__input" type="hidden" name="">
+            <div class="select__head"><span class="line">1 user</span> $420/year</div>
+            <ul class="select__list" style="display: none;">
+                <li class="select__item"><span class="first">1 user</span> $420/year</li>
+                <li class="select__item"><span>2 users</span> $840/year</li>
+                <li class="select__item"><span>3 users </span>$1260/year</li>
+                <li class="select__item"><span>4 users</span> $1680/year</li>
+                <li class="select__item"><span>5 users</span> $2100/year</li>
+                <li class="select__item"><p class="select__more">Get a Custom Quote</p></li>
+            </ul>
+          </div>
+
+          <div class="select select_eur">
+            <input class="select__input" type="hidden" name="">
+            <div class="select__head"><span class="line">1 user</span>€384/year</div>
+            <ul class="select__list" style="display: none;">
+                <li class="select__item"><span class="first">1 user</span>€384/year</li>
+                <li class="select__item"><span>2 users</span> €768/year</li>
+                <li class="select__item"><span>3 users </span>€1152/year</li>
+                <li class="select__item"><span>4 users</span> €1536/year</li>
+                <li class="select__item"><span>5 users</span> €1920/year</li>
+                <li class="select__item"><p class="select__more">Get a Custom Quote</p></li>
+            </ul>
+          </div>
+
+          <div class="select select_gbt">
+            <input class="select__input" type="hidden" name="">
+            <div class="select__head"><span class="line">1 user</span> £348/year</div>
+            <ul class="select__list" style="display: none;">
+                <li class="select__item"><span class="first">1 user</span> £348/year</li>
+                <li class="select__item"><span>2 users</span> £696/year</li>
+                <li class="select__item"><span>3 users </span>£1044/year</li>
+                <li class="select__item"><span>4 users</span> £1392/year</li>
+                <li class="select__item"><span>5 users</span> £1740/year</li>
+                <li class="select__item"><p class="select__more">Get a Custom Quote</p></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex">
+        <section class="plan">
+          <h3 class="plan__title">All plans include:</h3>
+          <ul class="plan__list">
+            <li><p>Direct integration with QuickBooks or Xero</p> </li>
+            <li><p>Standard onboarding and support</p></li>
+            <li><p>Multi-departments / projects</p></li>
+            <li><p>Unlimited document storage</p></li>
+            <li><p>Amazon Business Punch-in</p></li>
+            <li><p>Multi-currencies</p> </li>
+            <li><p>Lifetime updates</p></li>
+            <li><p>3-way matching </p></li>
+            <li><p>Multi-locations</p></li>
+            <li><p>Budgets</p></li>
+          </ul>
+          <a href="" class="plan__link">See all features</a>
+      </section>
+     
+      <section class="teams">
+        <div class="card card_s">
+          <p class="card__title">
+            For smaller teams
+          </p>
+          <p class="card__subtitle">
+            with ≤20 users
+          </p>
+          <h2 class="card__price card__price_big"></h2>
+          <p class="card__price-text card__price-text_long">per user per month billed annually</p>
+            <button class="card__btn">Get Started</button>
+            <img class="card__img" src="img/small-team.svg" alt="">
+        </div>
+
+        <div class="card card_b inactive">
+          <p class="card__title">
+            For larger teams
+          </p>
+          <p class="card__subtitle">
+            with >20 users
+          </p>
+          <h2 class="card__price">Individually tailored pricing</h2>
+          <p class="card__price-text">billed annually</p>
+          <button class="card__btn">Get a Custom Quote</button>
+          <img class="card__img" src="img/big-team.svg" alt="">
+        </div>
+      </section>
+    </div>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>
