@@ -8,6 +8,9 @@ let cardB = document.querySelector( ".card_b");
 let selectUsd = document.querySelector(".select_usd");
 let selectEur = document.querySelector(".select_eur");
 let selectGbt = document.querySelector(".select_gbt");
+let usd = document.querySelector(".usd");
+let eur = document.querySelector(".eur");
+let gbt = document.querySelector(".gbt");
 let currency;
 let yearPrice;
 
@@ -57,6 +60,9 @@ let yearPrice;
     selectUsd.style.display="block";
     selectEur.style.display="none";
     selectGbt.style.display="none";
+    usd.classList.add('active');
+    eur.classList.remove('active')
+    gbt.classList.remove('active')
     getPrice()
   }
 
@@ -67,6 +73,9 @@ let yearPrice;
     selectEur.style.display="block";
     selectUsd.style.display="none";
     selectGbt.style.display="none";
+    eur.classList.add('active');
+    usd.classList.remove('active')
+    gbt.classList.remove('active')
     getPrice()
   }
 
@@ -77,10 +86,12 @@ let yearPrice;
     selectGbt.style.display="block";
     selectUsd.style.display="none";
     selectEur.style.display="none";
+    gbt.classList.add('active');
+    usd.classList.remove('active')
+    eur.classList.remove('active')
     getPrice()
   }
-
- 
+ let numb = document.querySelector('.num')
 /*select*/
 jQuery(($) => {
   $('.select').on('click', '.select__head', function () {
@@ -100,7 +111,7 @@ jQuery(($) => {
       $('.select__head').removeClass('open');
       $(this).parent().fadeOut();
       $(this).parent().prev().text($(this).text());
-      $(this).parent().prev().prev().val($(this).text()); 
+    
 
   });
 
