@@ -416,6 +416,7 @@ input[type=range]::-webkit-slider-thumb::after {
     cursor: pointer;
     list-style-type: none;
     text-align: left;
+    font-weight: 600;
   }
   .select__item:hover {
     background-color: #EDEEF3;
@@ -431,6 +432,7 @@ input[type=range]::-webkit-slider-thumb::after {
     color: #4545F5;
     position: relative;
     text-align: center;
+    margin-top: 22px;
   }
   .select__more::before {
     content: "More than 20 users?";
@@ -448,7 +450,7 @@ input[type=range]::-webkit-slider-thumb::after {
     display: block;
     position: absolute;
     top: 0;
-    right: 10px;
+    right: 25px;
     width: 8px;
     height: 12px;
     background: url("img/arrow2.svg");
@@ -469,6 +471,7 @@ input[type=range]::-webkit-slider-thumb::after {
   .line {
     border-right: 2px solid #DDDEE5;
     padding-right: 10px;
+    font-weight: 500;
   }
   .first {
     margin-right: 25px;
